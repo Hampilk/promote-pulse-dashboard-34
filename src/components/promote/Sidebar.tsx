@@ -37,7 +37,7 @@ const NavItem: React.FC<NavItemProps> = ({ icon, label, active = false, hasDropd
 const Sidebar: React.FC = () => {
   // Determine if we're on the dashboard page
   const pathname = window.location.pathname;
-  const isDashboardPage = pathname === "/dashboard";
+  const isDashboardPage = pathname === "/dashboard" || pathname === "/";
 
   return (
     <div className="hidden md:block w-64 border-r bg-card h-screen sticky top-0">

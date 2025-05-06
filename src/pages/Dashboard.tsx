@@ -1,12 +1,12 @@
 
 import React from "react";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
-import { NextUIDashboard } from "@/components/dashboard/NextUIDashboard";
+import CombinedDashboard from "@/components/dashboard/CombinedDashboard";
 
 const Dashboard = () => {
   return (
     <DashboardLayout>
-      <NextUIDashboard />
+      <CombinedDashboard />
     </DashboardLayout>
   );
 };
