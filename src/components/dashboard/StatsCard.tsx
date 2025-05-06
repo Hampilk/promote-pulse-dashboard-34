@@ -21,7 +21,7 @@ const StatsCard: React.FC<StatsCardProps> = ({ title, value, change, trend, desc
           <h3 className="text-2xl font-bold">{value}</h3>
           <div className={cn(
             "flex items-center gap-1 text-sm font-medium px-2 py-1 rounded-full",
-            trend === "up" ? "bg-green-500/10 text-green-600" : "bg-destructive/10 text-destructive"
+            trend === "up" ? "bg-green-500/10 text-green-600 dark:bg-green-900/30 dark:text-green-400" : "bg-red-500/10 text-red-600 dark:bg-red-900/30 dark:text-red-400"
           )}>
             {trend === "up" ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
             {change}

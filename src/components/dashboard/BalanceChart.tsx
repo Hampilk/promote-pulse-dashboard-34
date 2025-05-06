@@ -12,7 +12,7 @@ interface BalanceChartProps {
 
 const BalanceChart: React.FC<BalanceChartProps> = ({ chartData }) => {
   return (
-    <div className="pt-3 px-3 pb-4">
+    <div className="pt-3 px-3 pb-1">
       <div className="h-[316px] max-xl:h-[254px]">
         <ChartContainer
           config={{ 

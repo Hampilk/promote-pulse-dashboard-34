@@ -17,7 +17,7 @@ const TabButton: React.FC<TabButtonProps> = ({ active, icon, children, badge, on
       variant={active ? "default" : "ghost"}
       className={cn(
         "flex items-center gap-2 px-4 py-2 h-10 relative transition-all",
-        active && "bg-gradient-to-r from-primary/20 to-primary/5"
+        active && "bg-gradient-to-r from-primary/10 to-primary/5"
       )}
       onClick={onClick}
     >
