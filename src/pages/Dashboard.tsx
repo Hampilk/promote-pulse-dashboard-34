@@ -1,17 +1,17 @@
 
 import React from "react";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
-import SidebarDemo from "@/components/sidebar-demo";
+import Dashboard from "@/components/dashboard/Dashboard";
 
-const Dashboard = () => {
+const DashboardPage = () => {
   return (
     <DashboardLayout>
       <div className="flex flex-col gap-6">
-        <h2 className="text-h2">Sidebar Component Demo</h2>
-        <SidebarDemo />
+        <h2 className="text-2xl font-semibold">Dashboard</h2>
+        <Dashboard />
       </div>
     </DashboardLayout>
   );
 };
 
-export default Dashboard;
+export default DashboardPage;
