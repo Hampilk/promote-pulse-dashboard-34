@@ -1,6 +1,5 @@
-
 import React, { useState } from "react";
-import { ArrowUpRight, ArrowDownRight, MoreHorizontal, ChevronRight, Search } from "lucide-react";
+import { ArrowUpRight, ArrowDownRight, MoreHorizontal, ChevronRight, Search, DollarSign, Users, ShoppingCart, Percent } from "lucide-react";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -258,24 +257,28 @@ const ModernDashboard = () => {
             value="$45,231.89" 
             change="12.5%" 
             isPositive={true}
+            icon={<DollarSign size={18} />}
           />
           <ModernMetricCard 
             title="Active Customers" 
             value="2,518" 
             change="8.2%" 
             isPositive={true}
+            icon={<Users size={18} />}
           />
           <ModernMetricCard 
             title="New Orders" 
             value="482" 
             change="3.1%" 
             isPositive={false}
+            icon={<ShoppingCart size={18} />}
           />
           <ModernMetricCard 
             title="Refund Rate" 
             value="0.8%" 
             change="0.5%" 
             isPositive={true}
+            icon={<Percent size={18} />}
           />
         </div>
         
