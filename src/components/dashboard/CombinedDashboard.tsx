@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -18,8 +17,17 @@ import MetricCard from "@/components/dashboard/MetricCard";
 import BalanceChart from "@/components/dashboard/BalanceChart";
 import CustomersList from "@/components/dashboard/CustomersList";
 
-// Tab Button Component - Making badge optional with ?
-const TabButton = ({ active, icon, children, badge, onClick }) => {
+// Define the props interface for TabButton
+interface TabButtonProps {
+  active: boolean;
+  icon: React.ReactNode;
+  children: React.ReactNode;
+  badge?: number | string; // Make badge optional with the ? mark
+  onClick: () => void;
+}
+
+// Tab Button Component with proper TypeScript types
+const TabButton: React.FC<TabButtonProps> = ({ active, icon, children, badge, onClick }) => {
   return (
     <Button
       variant={active ? "default" : "ghost"}
@@ -791,4 +799,3 @@ const comments = [
 ];
 
 export default CombinedDashboard;
-
