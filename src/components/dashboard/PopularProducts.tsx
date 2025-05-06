@@ -50,7 +50,7 @@ const PopularProducts: React.FC = () => {
   ];
 
   return (
-    <div className="bg-card border rounded-lg shadow-sm p-5 h-full">
+    <div className="bg-card border border-border rounded-lg shadow-sm p-5 h-full">
       <div className="flex items-center justify-between mb-5">
         <h2 className="font-medium text-lg">Popular products</h2>
         <button className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1 transition-colors">
@@ -72,8 +72,8 @@ const PopularProducts: React.FC = () => {
             <div className="flex-grow mr-2">
               <h3 className="font-medium text-sm">{product.name}</h3>
               <span className={`text-xs ${product.status === 'active' 
-                ? 'text-green-500 dark:text-green-400' 
-                : 'text-red-500 dark:text-red-400'}`}
+                ? 'text-green-400 dark:text-green-400' 
+                : 'text-red-400 dark:text-red-400'}`}
               >
                 {product.status === 'active' ? 'Active' : 'Offline'}
               </span>

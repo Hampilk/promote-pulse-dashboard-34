@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { ChevronRight } from 'lucide-react';
 
 interface Comment {
   id: string;
@@ -44,8 +45,14 @@ const Comments: React.FC = () => {
   ];
 
   return (
-    <div className="bg-card border rounded-lg shadow-sm p-5">
-      <h2 className="font-medium text-lg mb-4">Recent Comments</h2>
+    <div className="bg-card border border-border rounded-lg p-5">
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="font-medium text-lg">Recent Comments</h2>
+        <button className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1 transition-colors">
+          View all
+          <ChevronRight className="h-4 w-4" />
+        </button>
+      </div>
       <div className="space-y-4">
         {comments.map((comment) => (
           <div key={comment.id} className="flex space-x-3 p-2 hover:bg-muted/50 rounded-md transition-colors">

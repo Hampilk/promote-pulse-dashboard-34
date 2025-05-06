@@ -24,8 +24,10 @@ const TabButton: React.FC<TabButtonProps> = ({ active, icon, children, badge, on
       {active && (
         <div className="absolute -left-1 top-1/2 transform -translate-y-1/2 w-1 h-5 bg-primary rounded-r-full" />
       )}
-      {icon}
-      {children}
+      <span className={active ? "text-primary" : "text-muted-foreground"}>
+        {icon}
+      </span>
+      <span className={active ? "font-medium" : ""}>{children}</span>
       {badge && (
         <div className="flex justify-center items-center w-5 h-5 min-w-5 ml-1 rounded-full bg-destructive text-xs text-destructive-foreground">
           {badge}

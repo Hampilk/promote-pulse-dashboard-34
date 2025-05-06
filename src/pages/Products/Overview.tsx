@@ -3,7 +3,7 @@ import React from "react";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import DarkDashboard from "@/components/dashboard/DarkDashboard";
 
-const Dashboard = () => {
+const ProductsOverview = () => {
   return (
     <DashboardLayout>
       <DarkDashboard />
@@ -11,4 +11,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default ProductsOverview;
