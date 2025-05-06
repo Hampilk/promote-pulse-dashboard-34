@@ -1,7 +1,8 @@
 
 import React from "react";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+import { ChevronUp, ChevronDown } from "lucide-react";
 
 interface StatsCardProps {
   title: string;
@@ -13,14 +14,18 @@ interface StatsCardProps {
 
 const StatsCard: React.FC<StatsCardProps> = ({ title, value, change, trend, description }) => {
   return (
-    <Card>
+    <Card className="overflow-hidden border shadow-sm hover:shadow-md transition-shadow duration-300">
       <CardContent className="space-y-2 pt-6">
         <p className="text-muted-foreground text-sm">{title}</p>
         <div className="flex justify-between items-center">
           <h3 className="text-2xl font-bold">{value}</h3>
-          <Badge variant={trend === "up" ? "outline" : "destructive"}>
+          <div className={cn(
+            "flex items-center gap-1 text-sm font-medium px-2 py-1 rounded-full",
+            trend === "up" ? "bg-green-500/10 text-green-600" : "bg-destructive/10 text-destructive"
+          )}>
+            {trend === "up" ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
             {change}
-          </Badge>
+          </div>
         </div>
         <p className="text-muted-foreground text-xs">{description}</p>
       </CardContent>

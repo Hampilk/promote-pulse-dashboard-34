@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 
 interface TabButtonProps {
   active: boolean;
@@ -15,15 +15,21 @@ const TabButton: React.FC<TabButtonProps> = ({ active, icon, children, badge, on
   return (
     <Button
       variant={active ? "default" : "ghost"}
-      className="flex items-center gap-2"
+      className={cn(
+        "flex items-center gap-2 px-4 py-2 h-10 relative transition-all",
+        active && "bg-gradient-to-r from-primary/20 to-primary/5"
+      )}
       onClick={onClick}
     >
+      {active && (
+        <div className="absolute -left-1 top-1/2 transform -translate-y-1/2 w-1 h-5 bg-primary rounded-r-full" />
+      )}
       {icon}
       {children}
       {badge && (
-        <Badge variant="destructive" className="ml-2">
+        <div className="flex justify-center items-center w-5 h-5 min-w-5 ml-1 rounded-full bg-destructive text-xs text-destructive-foreground">
           {badge}
-        </Badge>
+        </div>
       )}
     </Button>
   );
