@@ -1,12 +1,15 @@
 
 import React from "react";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
-import ModernDashboard from "@/components/dashboard/ModernDashboard";
+import SidebarDemo from "@/components/sidebar-demo";
 
 const Dashboard = () => {
   return (
     <DashboardLayout>
-      <ModernDashboard />
+      <div className="flex flex-col gap-6">
+        <h2 className="text-h2">Sidebar Component Demo</h2>
+        <SidebarDemo />
+      </div>
     </DashboardLayout>
   );
 };
