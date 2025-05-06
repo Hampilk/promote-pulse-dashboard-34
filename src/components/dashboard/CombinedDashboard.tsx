@@ -18,7 +18,7 @@ import MetricCard from "@/components/dashboard/MetricCard";
 import BalanceChart from "@/components/dashboard/BalanceChart";
 import CustomersList from "@/components/dashboard/CustomersList";
 
-// Tab Button Component
+// Tab Button Component - Making badge optional with ?
 const TabButton = ({ active, icon, children, badge, onClick }) => {
   return (
     <Button
@@ -791,3 +791,4 @@ const comments = [
 ];
 
 export default CombinedDashboard;
+
