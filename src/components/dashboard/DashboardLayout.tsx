@@ -1,6 +1,6 @@
 
 import React from "react";
-import ModernSidebar from "@/components/dashboard/ModernSidebar";
+import CustomSidebar from "@/components/dashboard/CustomSidebar";
 import MobileSidebar from "@/components/dashboard/MobileSidebar";
 import Header from "@/components/dashboard/Header";
 
@@ -12,7 +12,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
   return (
     <div className="flex min-h-screen bg-background">
       {/* Desktop Sidebar */}
-      <ModernSidebar />
+      <CustomSidebar />
 
       {/* Main content */}
       <div className="flex-1 flex flex-col">
