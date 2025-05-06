@@ -1,12 +1,12 @@
 
 import React from "react";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
-import DarkDashboard from "@/components/dashboard/DarkDashboard";
+import ModernDashboard from "@/components/dashboard/ModernDashboard";
 
 const Dashboard = () => {
   return (
     <DashboardLayout>
-      <DarkDashboard />
+      <ModernDashboard />
     </DashboardLayout>
   );
 };
